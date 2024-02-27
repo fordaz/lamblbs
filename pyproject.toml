@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=65.5.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lamblbs"
+description = "Unofficial CLI to manage Lambdalabs Cloud resources such as: instances, ssh keys"
+keywords = ["lambdalabs"]
+authors = [
+  {name = "Fermin Ordaz", email = "fermin.ordaz@gmail.com"}
+]
+version = "2024.2.a0"
+requires-python = ">= 3.8"
+dependencies = [
+  "click",
+  "requests"
+]
+readme = "README.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lamblbs"]
+
+[project.scripts]
+lamblbs = "lamblbs.__main__:cli_launch"

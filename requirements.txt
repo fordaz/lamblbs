@@ -1,0 +1,6 @@
+click
+requests
+pytest
+build
+black
+twine
